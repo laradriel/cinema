@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +20,4 @@ Route::patch('/patch', function () {});
 Route::options('/options', function () {});
 
 Route::resource('users', UserController::class)
-  ->only(['index', 'store', 'update', 'destroy']);
+    ->only(['index', 'store', 'update', 'destroy']);
