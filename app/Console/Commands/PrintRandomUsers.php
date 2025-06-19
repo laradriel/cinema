@@ -26,7 +26,7 @@ class PrintRandomUsers extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         $this->info('Hello, World!');
         $users = User::all()->random(5)->select('id', 'name', 'email');
